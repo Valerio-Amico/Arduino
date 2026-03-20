@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+ 
+[project]
+name = "arduino_python"
+version = "0.1.0"
+description = "arduino driver module"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Valerio Amico", email = "valerio.amico98@gmail.com" }
+]
+dependencies = []
+ 
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+ 
+[tool.hatch.build.targets.wheel]
+include = ["arduino_python.py"]
+ 
+[tool.pytest.ini_options]
+testpaths = ["arduino_python"]
+ 
