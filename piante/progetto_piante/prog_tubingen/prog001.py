@@ -29,6 +29,8 @@ class Program():
                 print(status, ON_TIME, now, OFF_TIME)
                 self.ard.digital_write(13, status)
             
+                # distance=self.ard.read_distance(9, 10)
+                # print(distance)
             except:
                 self.connected = False
                 print("connection error")
